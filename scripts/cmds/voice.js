@@ -1,4 +1,4 @@
-const axios = require('axios');
+Iconst axios = require('axios');
 const supportedIds = ["rachel", "drew", "clyde", "paul", "domi", "dave", "fin", "sarah", "antoni", "thomas", "charlie", "george", "emily", "elli", "callum", "patrick", "harry", "liam", "dorothy", "josh", "arnold", "charlotte", "alice", "matilda", "matthew", "james", "joseph", "jeremy", "michael", "ethan", "chris", "gigi", "freya", "brian", "grace", "daniel", "lily", "serena", "adam", "nicole", "bill", "jessie", "sam", "glinda", "giovanni", "mimi"];
 
 module.exports = {
@@ -6,7 +6,7 @@ module.exports = {
     name: "voice",
     aliases:["🙂","😁"], 
     version: "1.0",
-    author: "Rishad",
+    author: "Rishad | aesther",
     countDown: 5,
     role: 0,
     category: "Fun",
