@@ -4,17 +4,17 @@ const fonts = {
 
     mathsans: {
 
-        a: "𝖺", b: "𝖻", c: "𝖼", d: "𝖽", e: "𝖾", f: "𝖿", g: "𝗀", h: "𝗁", i: "𝗂",
+        a: "a", b: "b", c: "c", d: "d", e: "e", f: "f", g: "g", h: "h", i: "i",
 
-        j: "𝗃", k: "𝗄", l: "𝗅", m: "𝗆", n: "𝗇", o: "𝗈", p: "𝗉", q: "𝗊", r: "𝗋",
+        j: "j", k: "k", l: "l", m: "m", n: "n", o: "o", p: "p", q: "q", r: "r",
 
-        s: "𝗌", t: "𝗍", u: "𝗎", v: "𝗏", w: "𝗐", x: "𝗑", y: "𝗒", z: "𝗓",
+        s: "s", t: "t", u: "u", v: "v", w: "w", x: "x", y: "y", z: "z",
 
-        A: "𝖠", B: "𝖡", C: "𝖢", D: "𝖣", E: "𝖤", F: "𝖥", G: "𝖦", H: "𝖧", I: "𝖨",
+        A: "A", B: "B", C: "C", D: "D", E: "E", F: "F", G: "G", H: "H", I: "I",
 
-        J: "𝖩", K: "𝖪", L: "𝖫", M: "𝖬", N: "𝖭", O: "𝖮", P: "𝖯", Q: "𝖰", R: "𝖱",
+        J: "J", K: "K", L: "L", M: "M", N: "N", O: "O", P: "P", Q: "Q", R: "R",
 
-        S: "𝖲", T: "𝖳", U: "𝖴", V: "𝖵", W: "𝖶", X: "𝖷", Y: "𝖸", Z: "𝖹",
+        S: "S", T: "T", U: "U", V: "V", W: "W", X: "X", Y: "Y", Z: "Z",
     }
 };
 
@@ -30,7 +30,7 @@ module.exports = {
   config: {
     name: "ask",
     version: 1.0,
-    author: "OtinXSandip | Aesther",
+    author: "𝗚-Aesther",
     longDescription: "AI",
     category: "ai",
     guide: {
@@ -47,14 +47,14 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
       if (!prompt) {
-        await message.reply("🌱𝙎𝘼𝙉𝘾𝙃𝙊𝙆𝙐𝙄𝙉𝘷2🌱 :\n\n[ᕦʕ . ☯ ᴥ ☯ . ʔᕤ✧]....?");
+        await message.reply("（„• ֊ •„)♡ ////:\n𝗣𝗙》[!]\n[𝘢𝘦𝘴𝘵𝘩𝘦𝘳-[📩]?");
         return;
       }
       const senderID = event.senderID;
       const senderInfo = await api.getUserInfo([senderID]);
       const senderName = senderInfo[senderID].name;
       const response = await axios.get(`https://sandipbaruwal.onrender.com/gpt?prompt=${encodeURIComponent(prompt)}`);
-      const answer = `🌱𝙎𝘼𝙉𝘾𝙃𝙊𝙆𝙐𝙄𝙉𝘷2🌱 :\n──────────── \n${response.data.answer} ☘️`;
+      const answer = `♡   ∩_∩\n    （„• ֊ •„)♡\n┏━∪∪━━ღ❦ღ┓\n☪ [${response.data.answer}] ♡\n♡   𝘢𝘦𝘴𝘵𝘩𝘦𝘳-[📩]\n┗ღ❦ღ━━━━━┛[✦]|⚪🔴🔵》〚${senderName}〛`;
 
       //apply const font to each letter in the answer
       let formattedAnswer = "";
