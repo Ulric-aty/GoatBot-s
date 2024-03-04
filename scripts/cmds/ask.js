@@ -23,7 +23,7 @@ const Prefixes = [
   'ai',
   'mitama',
   'ask',
-  'mitantsoa', 
+  'anja', 
 ];
 
 module.exports = {
@@ -47,7 +47,7 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
       if (!prompt) {
-        await message.reply(`♡   ∩_∩\n    （„• ֊ •„)♡:\n𝗣𝗙》[!]\n[${senderName}-[📩]?`);
+        await message.reply("♡   ∩_∩\n    （„• ֊ •„)♡:\n𝗣𝗙》[!]\n 𝘼𝘦𝘴𝘵𝘩𝘦𝘳-[📩]?");
         return;
       }
       const senderID = event.senderID;
