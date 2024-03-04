@@ -20,7 +20,7 @@ module.exports = {
         let res = await axios.get(BASE_URL)
         let dance = res.data.url;
         const form = {
-          body: `lets nachoo🕺`
+          body: `• | 𝘿𝘼𝙉𝘾𝙀[🕺]`
         };
      if (dance)
           form.attachment = await global.utils.getStreamFromURL(dance);
