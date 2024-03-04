@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `💬»𝗦𝘼𝙉𝘾𝙃𝙊𝙆𝙐𝙄𝙉♡𝗖𝗠𝗗\n `; // replace with your name 
+      msg += `💬»𝙂-♡𝘼𝙀𝙎𝙏𝙃𝙀𝙍\n⚪🔴🔵[ᴄᴍᴅs-𝗟𝗜𝗦𝗧]\n┏━━━━━━━━━┓`// rep𝙡ace with your name 
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -46,10 +46,10 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += ` \n︵❣【 ${category.toUpperCase()} 】❣︵`;
+          msg += ` \n︵🌐【 ${category.toUpperCase()} 】🌐︵`;
 const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
-            const cmds = names.slice(i, i + 3).map((item) => `\n🏅${item}|`);
+            const cmds = names.slice(i, i + 3).map((item) => `\n🈷️${item}|`);
             msg += ` ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
@@ -58,7 +58,7 @@ const names = categories[category].commands.sort();
       });
 
       const totalCommands = commands.size;
-      msg += `\n\n🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑]\n》𝙲𝚁𝙴𝙰𝚃𝙾𝚁:\n🌊𝗔𝗲𝘀𝘁𝗵𝗲𝗿🏅🌊\n𝙸𝚗 𝚊𝚗𝚢 𝚙𝚛𝚘𝚋𝚕𝚎𝚖 𝚠𝚒𝚝𝚑 𝚝𝚑𝚎 𝙱𝚘𝚝 \n🌱[!callad]🌱`;
+      msg += `\n\n┗━━━━━━┛🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑](◍•ᴗ•◍)\n》𝙲𝚁𝙴𝙰𝚃𝙾𝚁:\n🌊𝘼𝙀𝙎𝙏𝙃𝙀𝙍🏅🌊[𝙂𝙤𝙖𝙩𝙗𝙤𝙩-𝙑𝟮]\n𝙸𝚗 𝚊𝚗𝚢 𝚙𝚛𝚘𝚋𝚕𝚎𝚖 𝚠𝚒𝚝𝚑 𝚝𝚑𝚎 𝙱𝚘𝚝 \n🌱[!callad]🌱`;
       msg += ``;
       msg += ``; // its not decoy so change it if you want 
 
