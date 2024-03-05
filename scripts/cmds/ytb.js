@@ -66,7 +66,7 @@ module.exports = {
 			listChapter: "\n📖 Danh sách phân đoạn: %1\n"
 		},
 		en: {
-			error: "❌ An error occurred: %1",
+			error: "[❌] 𝙀𝙍𝙍𝙊𝙍 : \n[%1🔴]",
 			noResult: "⭕ No search results match the keyword %1",
 			choose: "%1Reply to the message with a number to choose or any content to cancel",
 			video: "video",
