@@ -8,7 +8,7 @@ module.exports = {
   config: {
     name: "prefix",
     version: "1.4",
-    author: "NTKhang",
+    author: "aesther",
     countDown: 5,
     role: 0,
     shortDescription: "Thay đổi prefix của bot",
