@@ -37,7 +37,7 @@ module.exports = {
     const videoName = data.join(" ");
 
     try {
-      api.sendMessage(`☕ | Searching video for "${videoName}".\n🕰️ | Please wait...`, event.threadID);
+      api.sendMessage(`🌐 | 𝙎𝙀𝘼𝙍𝘾𝙃𝙄𝙉𝙂(𝖞𝖙𝖇) \n 🆔 : ["${videoName}"].\n𝗣𝗟𝗦🦋⃤ 𝗪𝗔𝗜𝗧 ⚪🔵🔴...`, event.threadID);
 
       const searchResults = await yts(videoName);
       if (!searchResults.videos.length) {
@@ -71,7 +71,7 @@ module.exports = {
         }
 
         const message = {
-          body: `☕ | Title: ${video.title}\n🕰️ | Duration: ${video.duration.timestamp}`,
+          body: `🆔 | 𝙏𝙄𝙏𝙇𝙀🔵: ${video.title}\n⏲️ | 𝘿𝙐𝙍𝘼𝙏𝙄𝙊𝙉🔴: ${video.duration.timestamp}\n━━━━━━━━━━━━\n„ಡωಡ„Ae-sther🌱`,
           attachment: fs.createReadStream(filePath)
         };
 
