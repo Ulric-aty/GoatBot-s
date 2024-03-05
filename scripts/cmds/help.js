@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `💬»𝙂-♡𝘼𝙀𝙎𝙏𝙃𝙀𝙍\n⚪🔴🔵[(　・ω・)⊃-[二二]𝗟𝗜𝗦𝗧]\n┏━━━━━━━━━┓`// rep𝙡ace with your name 
+      msg += `[💬»𝘼𝙀-𝙏𝙃𝙀𝙍⚪🔴🔵]\n[(　・ω・)⊃-[二二]𝗟𝗜𝗦𝗧]\n┏━━━━━━━━━┓`// rep𝙡ace with your name 
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -58,16 +58,16 @@ const names = categories[category].commands.sort();
       });
 
       const totalCommands = commands.size;
-      msg += `\n\n┗━━━━━━┛🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑](◍•ᴗ•◍)\n》𝙲𝚁𝙴𝙰𝚃𝙾𝚁:\n🌊𝘼𝙀𝙎𝙏𝙃𝙀𝙍🏅🌊[𝙂𝙤𝙖𝙩𝙗𝙤𝙩-𝙑𝟮]\n𝙇𝙄𝙉𝙆:https://www.facebook.com/profile.php?id=61555882584314\n In any Request or Problem just type  \n🌱[( ˘▽˘)っ♨!callad]🌱`;
+      msg += `\n\n┗━━━━━━━━━┛🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑](◍•ᴗ•◍)\n┏━━━━━━━━━┓\n》𝙲𝚁𝙴𝙰𝚃𝙾𝚁:\n🌊𝘼𝙀𝙎𝙏𝙃𝙀𝙍🏅🌊[𝙂𝙤𝙖𝙩𝙗𝙤𝙩-𝙑𝟮]\n𝙇𝙄𝙉𝙆:https://www.facebook.com/profile.php?id=61555882584314\n In any Request or Problem just type  \n🌱[( ˘▽˘)っ♨!callad]🌱┗━━━━━━━━━┛`;
       msg += ``;
       msg += ``; // its not decoy so change it if you want 
 
       const helpListImages = [
-        "https://i.ibb.co/JHS1WNL/image.gif", // add image link here
-        "https://i.ibb.co/ZV5NdyJ/image.gif",
+        //"https://i.ibb.co/JHS1WNL/image.gif", // add image link here
+        //"https://i.ibb.co/ZV5NdyJ/image.gif",
 
-"https://i.ibb.co/CzRr9GH/image.gif",
-        "https://i.ibb.co/9ZGVFSd/image.gif",
+"https://i.ibb.co/bQnxW0S/image.jpg",
+        //"https://i.ibb.co/9ZGVFSd/image.gif",
 
         "https://i.ibb.co/mTQfnHF/image.gif",
 
