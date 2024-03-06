@@ -29,11 +29,11 @@ const models = {
 
 module.exports = {
   config: {
-    name: "Animirror",
-    aliases:["anime","animefy"], 
+    name: "art",
+    aliases:["animefy"], 
     version: "1.0",
     author: "SiAM",// Don't change 
-    countDown: 15,
+    countDown: 9,
     role: 0,
     shortDescription: "Turn yourself into an anime character!",
     longDescription: "Apply an anime-style filter to an image to turn it into an anime character.",
@@ -74,7 +74,7 @@ module.exports = {
         attachment: Stream,
       });
 
-      message.reaction("✅", event.messageID);
+      message.reaction("💗", event.messageID);
       message.unsend((await processingMessage).messageID);
 
     } catch (error) {
