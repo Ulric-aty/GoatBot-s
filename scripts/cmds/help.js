@@ -95,22 +95,7 @@ const names = categories[category].commands.sort();
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `╭── NAME ────⭓
-  │ ${configCommand.name}
-  ├── INFO
-  │ Description: ${longDescription}
-  │ Other names: ${configCommand.aliases ? configCommand.aliases.join(", ") : "Do not have"}
-  │ Other names in your group: Do not have
-  │ Version: ${configCommand.version || "1.0"}
-  │ Role: ${roleText}
-  │ Time per command: ${configCommand.countDown || 1}s
-  │ Author: ${author}
-  ├── Usage
-  │ ${usage}
-  ├── Notes
-  │ The content inside <XXXXX> can be changed
-  │ The content inside [a|b|c] is a or b or c
-  ╰━━━━━━━❖`;
+        const response = `🦋⃤𝗡𝗔𝗠𝗘⚪🔵🔴\n────────────\n〉[ ${configCommand.name}]\[🦋⃤𝗜𝗡𝗙𝗢⚪🔵🔴]\n--------------------------------------\n〉[𝘥𝘦𝘴𝘤𝘳𝘪𝘱𝘵𝘪𝘰𝘯]:\n▶︎${longDescription}\n〉🔵[𝘖𝘵𝘩𝘦𝘳-𝘯𝘢𝘮𝘦𝘴]:\n▶︎${configCommand.aliases ? configCommand.aliases.join(", ") : "Do not have"} Other names in your group: Do not have\n〉⚪[𝘝𝘦𝘳𝘴𝘪𝘰𝘯]:\n▶︎${configCommand.version || "1.0"}\n〉⚪[𝘙𝘰𝘭𝘦]:\n▶︎${roleText}\n〉⚪𝘛𝘪𝘮𝘦 𝘱𝘦𝘳 𝘤𝘰𝘮𝘮𝘢𝘯𝘥:\n ▶︎${configCommand.countDown || 1}s〉⚪[𝘈𝘶𝘵𝘩𝘰𝘳]:\n▶︎${author}\🦋⃤𝗨𝗦𝗔𝗚𝗘⚪🔵\n────────────\n▶︎ ${usage}\n━━━━━━━━━━━━\n„ಡωಡ„Ae-sther🌱`;
 
         await message.reply(response);
       }
