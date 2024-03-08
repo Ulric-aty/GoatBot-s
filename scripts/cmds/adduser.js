@@ -7,7 +7,7 @@ module.exports = {
 		version: "1.4",
 		author: "NTKhang",
 		countDown: 5,
-		role: 1,
+		role: 0,
 		shortDescription: {
 			vi: "Thêm thành viên vào box chat",
 			en: "Add user to box chat"
@@ -34,14 +34,14 @@ module.exports = {
 			cannotAddUser: "Bot bị chặn tính năng hoặc người dùng này chặn người lạ thêm vào nhóm"
 		},
 		en: {
-			alreadyInGroup: "Already in group",
-			successAdd: "- Successfully added %1 members to the group",
-			failedAdd: "- Failed to add %1 members to the group",
-			approve: "- Added %1 members to the approval list",
-			invalidLink: "Please enter a valid facebook link",
+			alreadyInGroup: "🤨𝙎𝙃𝙀/𝙃𝙀 is already in the group",
+			successAdd: "𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬 𝗔𝗗𝗗\n┏━━━━━━━━━━━━\n [✅]  %1 box chat!\n┗━━━━━━━━━━━━ ",
+			failedAdd: "🔴 𝙁𝘼𝙄𝙇𝙀𝘿 💀 🔴",
+			approve: "𝘼𝘿𝘿 𝚝𝚘 𝚝𝚑𝚎 𝘼𝙋𝙋𝙍𝙊𝙑𝘼𝙇 𝚕𝚒𝚜𝚝[📑]",
+			invalidLink: "🔴𝗜𝗡𝗩𝗔𝗟𝗜𝗗𝗟𝗜𝗡𝗞💀",
 			cannotGetUid: "Cannot get uid of this user",
-			linkNotExist: "This profile url does not exist",
-			cannotAddUser: "Bot is blocked or this user blocked strangers from adding to the group"
+			linkNotExist: "𝗧𝗛𝗜𝗦 𝗣𝗥𝗢𝗙𝗜𝗟 𝗗𝗢𝗘𝗦𝗡𝗧 𝗘𝗫𝗜𝗦𝗧[💀]",
+			cannotAddUser: "🤨 - 𝗕𝗢𝗧 𝗜𝗦 𝗕𝗟𝗢𝗖𝗞𝗘𝗗"
 		}
 	},
 
