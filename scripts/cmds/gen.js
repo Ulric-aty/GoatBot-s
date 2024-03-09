@@ -7,7 +7,7 @@ aliases: ['gen'],
     version: "1.1",
     author: "OtinXSandip",
     countDown: 10,
-    role: 2,
+    role: 0,
     shortDescription: {
       en: 'Text to Image'
     },
