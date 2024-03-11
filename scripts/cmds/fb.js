@@ -30,10 +30,10 @@ module.exports = {
 			tooLarge: "Rất tiếc không thể tải video cho bạn vì dung lượng lớn hơn 83MB"
 		},
 		en: {
-			missingUrl: "Please enter the facebook video/story (public) url you want to download",
-			error: "An error occurred while downloading the video",
-			downloading: "Downloading video for you",
-			tooLarge: "Sorry, we can't download the video for you because the size is larger than 83MB"
+			missingUrl: "𝙋𝙐𝙏 𝙐𝙍𝙇 𝙁𝘽 𝙑𝙄𝘿𝙀𝙊 (𝙋𝙐𝘽𝙇𝙄𝘾)",
+			error: "🔴𝙀𝙍𝙍𝙊𝙍🔴",
+			downloading: "𝙁𝘽-𝙑𝙄𝘿𝙀𝙊𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿:\n[⚪🔵🔴...]",
+			tooLarge: "🔴𝙁𝙄𝙇𝙀 𝙎𝙊 𝙇𝘼𝙍𝙂𝙀 🔴 [83MB]"
 		}
 	},
 
