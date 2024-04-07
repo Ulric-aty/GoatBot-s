@@ -9,8 +9,8 @@ module.exports = {
   config: {
     name: "help",
     version: "1.17",
-    author: "NTKhang | Aesther", // original author Kshitiz 
-    countDown: 5,
+    author: "Aesther",
+    countDown: 10,
     role: 0,
     shortDescription: {
       en: "View command usage and list all commands directly",
@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `[💬»𝘼𝙀-𝙏𝙃𝙀𝙍⚪🔴🔵]\n[(　・ω・)⊃-[二二]𝗟𝗜𝗦𝗧]\n┏━━━━━━━━━┓`// rep𝙡ace with your name 
+      msg += `💬»𝘼𝙀𝙎𝙏𝙃𝙀𝙍♡𝗖𝗠𝗗\n━━━━━━━━━━━━━━\n `; // replace with your name 
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -46,10 +46,10 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += ` \n⋆⋆🌐【 ${category.toUpperCase()} 】🌐⋆⋆`;
+          msg += ` \n━━━━━━━━━━━━━━\nミ★【 ${category.toUpperCase()} 】★彡`;
 const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
-            const cmds = names.slice(i, i + 3).map((item) => `\n〉🌊${item}|`);
+            const cmds = names.slice(i, i + 3).map((item) => `\n✦${item}`);
             msg += ` ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
@@ -58,21 +58,19 @@ const names = categories[category].commands.sort();
       });
 
       const totalCommands = commands.size;
-      msg += `\n\n┗━━━━━━━━━┛🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑](◍•ᴗ•◍)\n┏━━━━━━━━━┓\n》𝙲𝚁𝙴𝙰𝚃𝙾𝚁:\n🌊𝘼𝙀𝙎𝙏𝙃𝙀𝙍🏅🌊[𝙂𝙤𝙖𝙩𝙗𝙤𝙩-𝙑𝟮]\n𝙇𝙄𝙉𝙆:https://www.facebook.com/profile.php?id=61555882584314\n In any Request or Problem just type  \n🌱[( ˘▽˘)っ♨!callad]🌱┗━━━━━━━━━┛`;
+      msg += `\n━━━━━━━━━━━━━━\n🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑]\n━━━━━━━━━━━━━━\n⭕𝗖𝗥𝗘𝗔𝗧𝗢𝗥 𝗟𝗜𝗡𝗞⭕ :\n▪〉https://www.facebook.com/thegodess.aesther\n▪〉𝗕𝗢𝗧 :[🌐]𝘼𝙀𝙎𝙏𝙃𝙀𝙍©\n━━━━━━━━━━━━━━\n☪ 𝗡𝗕 : IF ANY PROBLEM USE  \n🔴[!callad]🔴`;
       msg += ``;
       msg += ``; // its not decoy so change it if you want 
 
       const helpListImages = [
-"https://i.postimg.cc/HW0P8x4c/9f6bb2e69331cbc23672802f96dba34e.jpg",
-"https://i.postimg.cc/pdDKc9dK/73d3d22edd2a05dfed3ac3a2ff812441.jpg",
-"https://i.postimg.cc/J7gtJrr8/d71c09f9b68c9e777d1d53ae0a9c664d.jpg",
-"https://i.postimg.cc/3x0qRZL7/1e825047a7a3ec880fad2eadcb685d12.jpg",
-"https://i.postimg.cc/cLD5XbrQ/d4ad61a4a00874e11c31b3f004f6ce5a.jpg",
-"https://i.postimg.cc/ydz6nPQy/7fe1d0f0391fb1c3f41a76b25c2f18c9.jpg",
-"https://i.postimg.cc/SN8h189Z/49026a16881dbaa2459db46899c2c254.jpg",
-"https://i.postimg.cc/N0nCwCqR/0d085b730d1450660e47120973fa116e.jpg",
-"https://i.postimg.cc/nLXTTKjr/4880b25b48a2d1f1b9926678fd7619b7.jpg",
-"https://i.postimg.cc/KzX7N6hp/04c4e5a5e7327294905c650466d233e2.jpg",
+        "https://i.ibb.co/JHS1WNL/image.gif", // add image link here
+        "https://i.ibb.co/ZV5NdyJ/image.gif",
+
+"https://i.ibb.co/CzRr9GH/image.gif",
+        "https://i.ibb.co/9ZGVFSd/image.gif",
+
+        "https://i.ibb.co/mTQfnHF/image.gif",
+
       ];
 
       const helpListImage = helpListImages[Math.floor(Math.random() * helpListImages.length)];
