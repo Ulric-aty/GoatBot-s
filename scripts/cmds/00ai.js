@@ -31,7 +31,7 @@ module.exports = {
       const senderName = senderInfo[senderID].name;
       const prompt = event.body.substring(prefix.length).trim();
       if (!prompt) {
-        await message.reply("[🌐]𝘼𝙀𝙎𝙏𝙃𝙀𝙍©\nദ്ദി ˉ͈̀꒳ˉ͈́ )✧ハロー harō");
+        await message.reply(`[🌐]𝘼𝙀𝙎𝙏𝙃𝙀𝙍©\n💬»[${senderName}]\n   ∧,,,∧\n  (  ̳• · • ̳)\n  /    づ★ ) ____________\n                 (Hello master!)  `);
         return;
       }
       const response = await axios.get(`https://sandipbaruwal.onrender.com/chatgpt?prompt=${encodeURIComponent(prompt)}`);
