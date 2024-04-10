@@ -34,8 +34,8 @@ module.exports = {
         await message.reply("[🌐]𝘼𝙀𝙎𝙏𝙃𝙀𝙍©\nദ്ദി ˉ͈̀꒳ˉ͈́ )✧ハロー harō");
         return;
       }
-      const response = await axios.get(`https://sandipbaruwal.onrender.com/gpt?prompt=${encodeURIComponent(prompt)}`);
-      const answer = `[🌐]𝘼𝙀𝙎𝙏𝙃𝙀𝙍©\n-------------------------------\n 💬»[${senderName}]\n${response.data.answer}~✳️`;
+      const response = await axios.get(`https://sandipbaruwal.onrender.com/chatgpt?prompt=${encodeURIComponent(prompt)}`);
+      const answer = `[🌐]𝘼𝙀𝙎𝙏𝙃𝙀𝙍©\n-------------------------------\n 💬»[${senderName}]\n${response.data.answer} ♡`;
 
       await message.reply(answer);
 
