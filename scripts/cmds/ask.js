@@ -1,71 +1,63 @@
 const axios = require('axios');
 
-const fonts = {
+async function fetchFromAI(url, params) {
+  try {
+    const response = await axios.get(url, { params });
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
 
-    mathsans: {
+async function getAIResponse(input, userId, messageID) {
+  const services = [
+    { url: 'https://ai-tools.replit.app/gpt', params: { prompt: input, uid: userId } },
+    { url: 'https://openaikey-x20f.onrender.com/api', params: { prompt: input } },
+    { url: 'http://fi1.bot-hosting.net:6518/gpt', params: { query: input } },
+    { url: 'https://ai-chat-gpt-4-lite.onrender.com/api/hercai', params: { question: input } }
+  ];
 
-        a: "a", b: "b", c: "c", d: "d", e: "e", f: "f", g: "g", h: "h", i: "i",
+  let response = "😺🐸  爪𝐢ķ𝓂𝔬几  💘🔥";
+  let currentIndex = 0;
 
-        j: "j", k: "k", l: "l", m: "m", n: "n", o: "o", p: "p", q: "q", r: "r",
-
-        s: "s", t: "t", u: "u", v: "v", w: "w", x: "x", y: "y", z: "z",
-
-        A: "A", B: "B", C: "C", D: "D", E: "E", F: "F", G: "G", H: "H", I: "I",
-
-        J: "J", K: "K", L: "L", M: "M", N: "N", O: "O", P: "P", Q: "Q", R: "R",
-
-        S: "S", T: "T", U: "U", V: "V", W: "W", X: "X", Y: "Y", Z: "Z",
+  for (let i = 0; i < services.length; i++) {
+    const service = services[currentIndex];
+    const data = await fetchFromAI(service.url, service.params);
+    if (data && (data.gpt4 || data.reply || data.response)) {
+      response = data.gpt4 || data.reply || data.response;
+      break;
     }
-};
+    currentIndex = (currentIndex + 1) % services.length; // Move to the next service in the cycle
+  }
 
-const Prefixes = [
-  'ae',
-  'ai',
-  'mitama',
-  'ask',
-  'anja', 
-];
+  return { response, messageID };
+}
 
 module.exports = {
   config: {
-    name: "ask",
-    version: 1.0,
-    author: "𝗚-Aesther",
-    longDescription: "AI",
-    category: "ai",
-    guide: {
-      en: "{p} questions",
-    },
+    name: 'ai',
+    author: 'Arn',
+    role: 0,
+    category: 'ai',
+    shortDescription: 'ai to ask anything',
   },
-  onStart: async function () {},
-  onChat: async function ({ api, event, args, message }) {
-    try {
+  onStart: async function ({ api, event, args }) {
+    const input = args.join(' ').trim();
+    if (!input) {
+      api.sendMessage(`👾 Aesther - Simp`, event.threadID, event.messageID);
+      return;
+    }
 
-      const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
-      if (!prefix) {
-        return; // Invalid prefix, ignore the command
-      }
-      const prompt = event.body.substring(prefix.length).trim();
-      if (!prompt) {
-        await message.reply("♡   ∩_∩\n    （„• ֊ •„)♡:\n𝗣𝗙》[!]\n 𝘼𝘦𝘴𝘵𝘩𝘦𝘳-[📩]?");
-        return;
-      }
-      const senderID = event.senderID;
-      const senderInfo = await api.getUserInfo([senderID]);
-      const senderName = senderInfo[senderID].name;
-      const response = await axios.get(`https://sandipbaruwal.onrender.com/gpt?prompt=${encodeURIComponent(prompt)}`);
-      const answer = `♡   ∩_∩\n    （„• ֊ •„)♡\n┏━∪∪━━━━ღ❦ღ┓\n🌐[${response.data.answer}] ♡\n♡   𝘢𝘦𝘴𝘵𝘩𝘦𝘳-[📩]\n┗ღ❦ღ━━━━━━━┛\n[✦]|〚${senderName}〛`;
-
-      //apply const font to each letter in the answer
-      let formattedAnswer = "";
-      for (let letter of answer) {
-        formattedAnswer += letter in fonts.mathsans ? fonts.mathsans[letter] : letter;
-      }
-
-      await message.reply(formattedAnswer);
-
-    } catch (error) {
-      console.error("Error:", error.message);
+    const { response, messageID } = await getAIResponse(input, event.senderID, event.messageID);
+    api.sendMessage(`${response}\n👾 Aesther`, event.threadID, messageID);
+  },
+  onChat: async function ({ event, message }) {
+    const messageContent = event.body.trim().toLowerCase();
+    if (messageContent.startsWith("ai")) {
+      const input = messageContent.replace(/^ai\s*/, "").trim();
+      const { response, messageID } = await getAIResponse(input, event.senderID, message.messageID);
+      message.reply(`${response}\n👾 Aesther`, messageID);
     }
   }
 };
